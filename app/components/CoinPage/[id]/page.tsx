@@ -1,7 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import ReactHtmlParser from 'react-html-parser';
 import { usePathname } from 'next/navigation';
 import { SingleCoin } from '../../../config/api';
 import { CryptoState } from '../../../contexts/CryptoContext';
@@ -87,7 +86,7 @@ const CoinPage = () => {
                 {coin.name}
               </h3>
               <p className="text-sm text-gray-400 text-center px-2">
-                {ReactHtmlParser(coin.description.en.split('. ')[0])}.
+                {coin.description.en.split('. ')[0]}.
               </p>
 
               <div className="mt-4 flex flex-col w-full justify-center text-center">
